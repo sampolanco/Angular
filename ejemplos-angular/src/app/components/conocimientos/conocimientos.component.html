@@ -1,0 +1,19 @@
+<h2>Conocimientos</h2>
+<hr>
+<div class="row py-4">
+  <div class="col-3">
+    <input type="text" class="form-control"  placeholder="Filtrar..." (keyup.enter)='buscar(condicion.value)' #condicion>
+  </div>
+  <div class="col-9">
+    <button type="submit" class="btn btn-dark" (click)='buscar(condicion.value)'>Buscar</button>
+  </div>
+</div>
+<div class="row" *ngIf="conocimientoDatos.length==0">
+  <div class="alert alert-primary" role="alert">
+    No se encontraron coincidencias para el texto indicado
+  </div>
+</div>
+<div class="row">
+  <app-tarjeta-resumen [conocimiento]="elemento" *ngFor="let elemento of conocimientoDatos" class="col-md-6 col-lg-4 mb-4">
+  </app-tarjeta-resumen>
+</div>

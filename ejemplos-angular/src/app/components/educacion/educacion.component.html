@@ -1,0 +1,9 @@
+<h2>Educación</h2>
+<div class="card-columns container">
+  <div *ngFor="let elemento of tarjetaElements" class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{elemento.institucion}}</h5>
+      <p class="card-text">{{elemento.titulo}}</p>
+    </div>
+  </div>
+</div>

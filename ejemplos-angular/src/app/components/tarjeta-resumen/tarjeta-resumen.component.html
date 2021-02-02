@@ -1,0 +1,14 @@
+<div class="card h-100">
+  <div class="m-2">
+    <img src={{conocimiento.rutaImagen}} class="alto70 mx-auto d-block" alt="...">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{conocimiento.nombre}}</h5>
+    <p class="card-text">{{conocimiento.descripciones}}</p>
+    <p class="card-text">Nivel: {{conocimiento.nivel}}</p>
+  </div>
+  <div class="card-footer">
+    <!--<a [routerLink]="['/tarjetaRoute',elemento.id]">Ver detalle</a>-->
+    <a [routerLink]="" (click)="verTarjeta()" >Ver detalle</a>
+  </div>
+</div>

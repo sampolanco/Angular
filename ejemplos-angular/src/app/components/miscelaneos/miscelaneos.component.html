@@ -1,0 +1,43 @@
+<i class="fa fa-2x fa-star"></i>
+<p [style.fontSize.px]="tamanoFuente">style.fontSize.px</p>
+<p [ngStyle]="{'font-size': getTamanoFuente()}">ngStyle</p>
+<button class="btn btn-primary" (click)='tamanoFuente=tamanoFuente+5'>Crecer</button>
+<button class="btn btn-primary" (click)='tamanoFuente=tamanoFuente-5'>Achicar</button>
+
+<br><br>
+
+<div [ngClass]="alertClass" role="alert">
+  ngClass variable
+</div>
+<button class="btn btn-primary" (click)="alertClass='alert-info'">alert-info</button>
+<button class="btn btn-primary" (click)="alertClass='alert-danger'">alert-danger</button>
+
+<br><br>
+
+<div [ngClass]="{'alert-info': alertInfo,'alert-danger': !alertInfo}" role="alert">
+  ngClass if
+</div>
+<button class="btn btn-primary" (click)="alertInfo=!alertInfo">cambiar alerta</button>
+
+<br><br>
+
+<button
+  class="btn btn-primary"
+  (click)="procesarTimeOut()"
+  [disabled]="loading">Ejecutar proceso asíncrono</button>
+<p *ngIf="!loading">Procesar</p>
+<p *ngIf="loading">Procesando ...</p>
+<i class="fa fa-spinner fa-2x" [ngClass]="{'fa-spin': loading,'d-none':!loading}" aria-hidden="true"></i>
+
+<div [ngSwitch]="condicionSwitch">
+  <div *ngSwitchCase="1">ngSwitch caso 1</div>
+  <div *ngSwitchCase="2">ngSwitch caso 2</div>
+  <div *ngSwitchCase="3">ngSwitch caso 3</div>
+  <div *ngSwitchDefault>ngSwitch caso default</div>
+</div>
+<button class="btn btn-primary" (click)="getCondicionSwitch()">cambiar ngSwitch</button>
+
+<br><br>
+
+<button class="btn btn-primary" (click)="getCondicionSwitch()" [routerLink]="['10','child']">Ir al componente hijo</button>
+<router-outlet></router-outlet>

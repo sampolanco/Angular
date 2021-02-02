@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.minimoAncho50 {
+  min-width: 50px;
+}
+.alto100 {
+  height: 100px;
+}
+.alto70 {
+  height: 70px;
+}
+
+.alto120 {
+  height: 120px;
+}
+
+.maxAlto150 {
+  max-height: 150px;
+}

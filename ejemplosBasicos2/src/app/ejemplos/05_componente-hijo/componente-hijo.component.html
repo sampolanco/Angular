@@ -1,0 +1,22 @@
+<p>componente-hijo works!</p>
+<p>
+    Edad:
+    {{persona.edad}}
+</p>
+<div id="Componente-hijoComponent">
+     <form (ngSubmit)="metodoNgSubmit()">
+         <input type="text" 
+         placeholder="Default" 
+         name="nombre" 
+         [(ngModel)]="persona.nombre"/>
+         <input type="number" 
+         placeholder="Default" 
+         name="edad" 
+         [(ngModel)]="persona.edad"/>
+         <button type="submit">agregar persona</button>
+     </form>
+</div>
+<div id="Lista personas">
+    <app-listado-personas [personas]="personas"></app-listado-personas>
+</div>
+<hr>

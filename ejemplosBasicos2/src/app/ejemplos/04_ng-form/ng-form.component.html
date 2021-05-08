@@ -1,0 +1,16 @@
+<p>ng-form works!</p>
+
+<p>
+    Edad:
+    {{persona.edad}}
+</p>
+<div id="Componente-ngForm">
+     <form (ngSubmit)="metodoNgSubmit()">
+         <input type="text" 
+         placeholder="Default" 
+         name="nombre" 
+         [(ngModel)]="persona.nombre"/>
+         <button type="submit">AumentarEdadPersona</button>
+     </form>
+</div>
+<hr>

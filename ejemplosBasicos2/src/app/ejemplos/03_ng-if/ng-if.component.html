@@ -1,0 +1,15 @@
+<p>ng-if works!</p>
+<div id="Componente-ngIf">
+     <div *ngIf="isMostrarDivPrimario; else referenciaLocalDivSecundario">
+        Div primario
+     </div>
+     
+     <ng-template #referenciaLocalDivSecundario>
+         <div>
+            Div secundario
+         </div>
+     </ng-template>
+
+     <button (click)="ocultarMostrarDivPrimario()">Mostrar/Ocultar Div</button>
+</div>
+<hr>

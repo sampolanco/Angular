@@ -1,0 +1,25 @@
+<p class="fuenteTituloEtiquetas mt-4">{{etiqueta.descripcion}}</p>
+<div *ngFor="let filtro of filtros">
+    <input class="btn btn-outline-secondary btn-sm mt-1" 
+    (click)="clicBotonFiltro(filtro)"
+    type="button" [value]="filtro+' x'">
+</div>
+<div *ngFor="let etiqueta of etiqueta.etiquetasHijo">
+    <p  data-bs-toggle="collapse" 
+    [attr.href]="'#collapse_'+etiqueta.descripcion" 
+    aria-expanded="false" [attr.aria-controls]="'collapse_'+etiqueta.descripcion">
+        {{etiqueta.descripcion}}
+    </p>
+    <div class="collapse show" id="collapse_{{etiqueta.descripcion}}">
+        <div class="form-check" *ngFor="let etiquetaHijo of etiqueta.etiquetasHijo">
+            <input class="form-check-input" 
+            type="checkbox" 
+            value="{{etiquetaHijo.descripcion}} "
+            id={{etiquetaHijo.descripcion}} 
+            (change)="clicElementoCheck($event)">
+            <label class="form-check-label" for={{etiquetaHijo.idEtiqueta}}>
+                {{etiquetaHijo.descripcion}}
+            </label>
+        </div>
+    </div>  
+</div>

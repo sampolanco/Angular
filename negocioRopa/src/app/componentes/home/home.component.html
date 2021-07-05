@@ -1,0 +1,22 @@
+<div id="home">
+    <div id="imagenes">
+        <div *ngFor="let anuncio of anucios">
+            <div class="container mt-5">
+                    <div 
+                        class="mx-auto d-block anchoMaximo800 
+                                textoCentrado" 
+                        [ngStyle]="{'background-image': 'url(' + anuncio.urlOrigen + ')',
+                                     'color':anuncio.colorTextoDentroImagen
+                                    }"
+                    >
+                        <div class="position-relative h-100">
+                            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                                <p class="fuenteAnuncioPrincipal fw-bold">{{anuncio.textoPrincipalDentroImagen}}</p>
+                                <p class="fuenteAnuncioSecundario">{{anuncio.textoSecundarioDentroImagen}}</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

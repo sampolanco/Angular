@@ -1,0 +1,28 @@
+.anchoMaximo100 {
+    max-width: 100px;
+    height: 100px;
+  }
+  
+  
+  .textoCentrado {
+    text-align: center;
+  }
+  
+  .fuenteTarjetaDescripcion{
+    font-size: 1.1rem;
+  }
+  
+  .fuenteTarjetaPrecio{
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .colorTarjetaPrecioDescuento{
+    font-size: 1.1rem;
+    color: brown;
+    font-weight: bold;
+  }
+  .fuenteTarjetaPrecioDeshabilitado{
+    font-size: 1.1rem;
+    color: gray;
+    text-decoration: line-through;
+  }

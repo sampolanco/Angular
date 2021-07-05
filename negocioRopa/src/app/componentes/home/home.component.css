@@ -1,0 +1,17 @@
+.anchoMaximo800 {
+  max-width: 800px;
+  height: 500px;
+}
+
+
+.textoCentrado {
+  text-align: center;
+}
+
+.fuenteAnuncioPrincipal{
+  font-size: 2.5rem;
+}
+
+.fuenteAnuncioSecundario{
+  font-size: 1.1rem;
+}

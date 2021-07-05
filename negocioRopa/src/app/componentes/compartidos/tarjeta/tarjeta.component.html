@@ -1,0 +1,20 @@
+<div id="home">
+    <div id="imagenes">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+                <div *ngFor="let tarjeta of tarjetas">
+                    <div class="col mt-3">
+                        <div class="card">
+                          <img src={{tarjeta.urlOrigen}} class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-title fuenteTarjetaDescripcion">{{tarjeta.textoDescripcion}}</p>
+                            <span class="card-text colorTarjetaPrecioDescuento">{{tarjeta.precioConDescuento}} </span>
+                            <span class="card-text fuenteTarjetaPrecioDeshabilitado"> {{tarjeta.precio}}</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
